@@ -67,7 +67,7 @@ void Grade34(int q){
 	if(c == q){
 		cout << "Output: end! All right, that's great! Your score is 100." << endl;
 	}else{
-		cout << "end! Wrong question, your score is 50" << result << "." << endl;
+		cout << "end! Wrong question, your score is " << result << "." << endl;
 	}
 	
 }
