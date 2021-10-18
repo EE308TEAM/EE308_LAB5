@@ -1,11 +1,12 @@
 #include<iostream>
 #include<cmath>
 #include<stdlib.h>
+#include<time.h>
 using namespace std;
 
 void fun3(int numq,double OneQue);
 int main(){
-	fun3(1,100);
+	fun3(3,100);
 	return 0;
 }
 
@@ -14,34 +15,39 @@ void fun3(int numq,double OneQue){
 	int num4;
     int count=0;
     double inValue;
-    
+    	
 	for(int i=0;i<numq;i++){
-		num2=rand()%10;
-		num3=rand()%10;
+		srand((unsigned)time(NULL));
+		num2=rand();
+		num3=rand();
 		num4=rand()%4;
 		if(num4==1){
 			cout << "Output: " << num2 << "+" << num3 << "=?" << endl;
 			cout << "Input: ";
 			cin >> inValue;
-			if(inValue==(num2+num3))
+			double a=((double)((int)((num2+num3+0.005)*100)))/100;
+			if(inValue==a)
 			    count++;
 		}else if(num4==2){
 			cout << "Output: " << num2 << "-" << num3 << "=?" << endl;
 			cout << "Input: ";
 			cin >> inValue;
-			if(inValue==(num2-num3))
+			double a=((double)((int)((num2-num3+0.005)*100)))/100;
+			if(inValue==a)
 			    count++;
 		}else if(num4==3){
 			cout << "Output: " << num2 << "*" << num3 << "=?" << endl;
 			cout << "Input: ";
 			cin >> inValue;
-			if(inValue==(num2*num3))
+			double a=((double)((int)((num2*num3+0.005)*100)))/100;
+			if(inValue==a)
 			    count++;
 		}else if(num4==0){
 			cout << "Output: " << num2 << "/" << num3 << "=?" << endl;
 			cout << "Input: ";
 			cin >> inValue;
-			if(inValue==(num2/num3))
+			double a=((double)((int)((num2/num3+0.005)*100)))/100;
+			if(inValue==a)
 			    count++;
 		}
 	}
